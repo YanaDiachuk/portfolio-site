@@ -1,0 +1,29 @@
+﻿
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Тёмный футуризм+готика+стимпанк */
+:root { color-scheme: dark; }
+body {
+  @apply bg-goth-bg text-neutral-200 bg-plate min-h-screen;
+}
+a { @apply text-goth-accent hover:underline; }
+
+.card {
+  @apply bg-goth-card/80 rounded-2xl p-6 shadow-brass border border-neutral-800;
+}
+.h1 { @apply font-display text-4xl md:text-5xl tracking-wide; }
+.h2 { @apply font-techno text-2xl md:text-3xl uppercase; }
+.btn {
+  @apply inline-flex items-center rounded-xl border border-goth-accent/30 px-4 py-2 hover:bg-goth-accent/10;
+}
+.input {
+  @apply w-full rounded-lg bg-black/40 border border-neutral-700 px-3 py-2 outline-none focus:border-goth-accent;
+}
+.grid-plate {
+  background-image: linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: -1px -1px;
+  @apply rounded-2xl border border-neutral-800;
+}
