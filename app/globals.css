@@ -1,9 +1,9 @@
-﻿
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
+@config "../tailwind.config.ts";
+@import "tailwindcss";
 
-/* Тёмный футуризм+готика+стимпанк */
 :root { color-scheme: dark; }
 body {
   @apply bg-goth-bg text-neutral-200 bg-plate min-h-screen;

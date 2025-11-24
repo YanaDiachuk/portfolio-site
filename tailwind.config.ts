@@ -1,5 +1,4 @@
-﻿
-import type { Config } from 'tailwindcss'
+﻿import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
@@ -9,7 +8,7 @@ const config: Config = {
         goth: {
           bg: '#0a0a0b',
           card: '#121216',
-          accent: '#d0b37a', // латунь/медь (стимпанк)
+          accent: '#d0b37a',
         },
       },
       fontFamily: {

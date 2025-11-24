@@ -1,15 +1,20 @@
-﻿import { NextResponse } from 'next/server'
-import { supabaseServer } from '@/lib/supabaseServer'
+﻿import { supabaseServer } from "@/lib/supabaseServer"
 
 export async function POST(req: Request) {
+  const supabase = supabaseServer()
   const body = await req.json()
-  if (!body?.message) return NextResponse.json({ ok: false }, { status: 400 })
-  const supa = supabaseServer()
-  await supa.from('contact_messages').insert({
-    name: body.name ?? null,
-    email: body.email ?? null,
-    message: body.message
-  })
-  return NextResponse.json({ ok: true })
+
+  const { name, email, message } = body
+
+  const { error } = await supabase
+    .from("contact_messages")   // ← ИСПОЛЬЗУЕМ ТВОЮ ТАБЛИЦУ
+    .insert([{ name, email, message }])
+
+  if (error) {
+    console.error(error)
+    return new Response("Error saving message", { status: 500 })
+  }
+
+  return new Response("Success", { status: 200 })
 }
 
