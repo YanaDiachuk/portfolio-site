@@ -11,11 +11,15 @@ const config: Config = {
           accent: '#d0b37a',
         },
       },
+
+      /* Всё шрифтовое пространство теперь Chillax */
       fontFamily: {
-        display: ['"Cinzel Decorative"', 'serif'],
-        techno: ['"Orbitron"', 'sans-serif'],
-        gothic: ['"UnifrakturMaguntia"', 'serif'],
+        display: ['var(--font-main)'],   // заголовки
+        techno: ['var(--font-main)'],    // h2 и др.
+        gothic: ['var(--font-main)'],    // стилизованные тексты
+        sans: ['var(--font-main)'],      // body текста
       },
+
       boxShadow: {
         brass: '0 1px 0 #3a2f1a, inset 0 0 8px #2b2314',
       },
@@ -26,4 +30,5 @@ const config: Config = {
   },
   plugins: [],
 }
+
 export default config
