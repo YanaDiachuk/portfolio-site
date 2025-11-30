@@ -34,8 +34,7 @@ export default function CartList() {
 
   return (
     <div className="card">
-      <h2 className="h2 mb-4">Cart</h2>
-
+      
       {items.length === 0 ? (
         <p>Cart is empty.</p>
       ) : (

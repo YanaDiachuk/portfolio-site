@@ -1,27 +1,34 @@
-﻿'use client'
+﻿// components/Header.tsx
+'use client'
+
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import CartButton from './CartButton'
-
-const links = [
-
-  { href: '/artworks', label: 'Artworks' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
-]
 
 export default function Header() {
-  const p = usePathname()
   return (
-    <header className="flex items-center justify-between">
-    <Link href="/" className="h2">Angie • Portfolio</Link>
-      <nav className="flex gap-4">
-        {links.map(l => (
-          <Link key={l.href} className={`btn ${p===l.href ? 'bg-goth-accent/10' : ''}`} href={l.href}>{l.label}</Link>
-        ))}
-        <CartButton />
+    <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
+      {/* Логотип / название сайта */}
+      <Link
+        href="/"
+        className="font-main text-xl tracking-wide"
+      >
+        Angie
+      </Link>
+
+      {/* Навигация – всегда кнопками, без гамбургера */}
+      <nav className="flex flex-wrap gap-2">
+        <Link href="/artworks" className="btn px-3 py-1 text-sm md:text-base">
+          Artworks
+        </Link>
+        <Link href="/blog" className="btn px-3 py-1 text-sm md:text-base">
+          Blog
+        </Link>
+        <Link href="/contact" className="btn px-3 py-1 text-sm md:text-base">
+          Contact
+        </Link>
+        <Link href="/cart" className="btn px-3 py-1 text-sm md:text-base">
+          Cart
+        </Link>
       </nav>
     </header>
   )
 }
-
