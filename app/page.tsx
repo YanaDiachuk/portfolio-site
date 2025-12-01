@@ -24,7 +24,7 @@ export default function AboutPage() {
         <h1 className="h1 mb-4">About me</h1>
 
        <p>
-        Hey, I’m Angie, hope your little journey through my site is a whole experience (｡•ᴗ•｡)♡
+        Hey, I’m Angie, hope your little journey through my site is a whole experience {' '}(｡•ᴗ•｡)♡
       </p>
 
       <p>
@@ -33,7 +33,7 @@ export default function AboutPage() {
       </p>
 
       <p>
-        I’m obsessed with autumn and the ocean. And Italy. Yeah, that’s my entire personalit (ﾉ◕ヮ◕)
+        I’m obsessed with autumn and the ocean. And Italy. Yeah, that’s my entire personality {' '} (ﾉ◕ヮ◕)
       </p>
 
       <p>
@@ -43,18 +43,18 @@ export default function AboutPage() {
 
       <p>
         On this website you can{' '}
-        <Link href="/artworks" className="underline hover:opacity-70">
-          check out my work
+        <Link href="/artworks" data-cy="home-artworks-link" className="underline hover:opacity-70">
+          check out my works
         </Link>{' '}
         and if you vibe with it hard enough, you can even snag a piece.
       </p>
 
       <p>
-        If you want to{' '}
-        <Link href="/contact" className="underline hover:opacity-70">
+        Feel free to{' '}
+        <Link href="/contact" data-cy="home-contact-link" className="underline hover:opacity-70">
           message me
         </Link>
-        , feel free — it honestly makes my day (⁀ᗢ⁀)
+          {' '} — it honestly makes my day (⁀ᗢ⁀)
       </p>
 
       <p>

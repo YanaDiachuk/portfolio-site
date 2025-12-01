@@ -42,7 +42,6 @@ export default function CartList() {
           {items.map(it => (
             <li key={it.id} className="flex items-center justify-between gap-4">
 
-  {/* мини-иконка */}
   <div className="relative w-16 h-16 flex-shrink-0">
     {it.artworks?.image_url && (
       <img
@@ -62,7 +61,7 @@ export default function CartList() {
   </div>
 
   {/* кнопка */}
-  <button className="btn" onClick={() => removeItem(it.id)}>Remove</button>
+  <button className="btn" data-cy="remove-btn" onClick={() => removeItem(it.id)}>Remove</button>
 </li>
 
           ))}
@@ -73,8 +72,8 @@ export default function CartList() {
         <div>Total: {money(total)}</div>
 
         <div className="flex gap-2">
-          <button className="btn" onClick={clearAll}>Clear</button>
-          <button className="btn" disabled>Checkout (later)</button>
+          <button className="btn" data-cy="clear-btn" onClick={clearAll}>Clear</button>
+          <button className="btn" data-cy="checkout-btn" disabled>Checkout (later)</button>
         </div>
       </div>
     </div>

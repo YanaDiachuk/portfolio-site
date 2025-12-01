@@ -40,6 +40,7 @@ export default function BlogFilters({ onResult }: { onResult: (posts: any[]) => 
       {/* Кнопка минимальная, без лишнего акцента */}
       <button
         type="button"
+        data-cy="apply-filters"
         className="btn !px-2 !py-1 !text-xs border-neutral-700"
         onClick={search}
       >

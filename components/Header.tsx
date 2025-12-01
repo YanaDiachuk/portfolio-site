@@ -14,18 +14,17 @@ export default function Header() {
         Angie
       </Link>
 
-      {/* Навигация – всегда кнопками, без гамбургера */}
       <nav className="flex flex-wrap gap-2">
-        <Link href="/artworks" className="btn px-3 py-1 text-sm md:text-base">
+        <Link href="/artworks" data-cy="artworks-btn" className="btn px-3 py-1 text-sm md:text-base">
           Artworks
         </Link>
-        <Link href="/blog" className="btn px-3 py-1 text-sm md:text-base">
+        <Link href="/blog" data-cy="blog-btn" className="btn px-3 py-1 text-sm md:text-base">
           Blog
         </Link>
-        <Link href="/contact" className="btn px-3 py-1 text-sm md:text-base">
+        <Link href="/contact" data-cy="contact-btn" className="btn px-3 py-1 text-sm md:text-base">
           Contact
         </Link>
-        <Link href="/cart" className="btn px-3 py-1 text-sm md:text-base">
+        <Link href="/cart" data-cy="cart-btn" className="btn px-3 py-1 text-sm md:text-base">
           Cart
         </Link>
       </nav>
