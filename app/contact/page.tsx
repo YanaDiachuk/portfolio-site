@@ -11,7 +11,7 @@ export default function ContactPage() {
       <h1 className="h1">Contact</h1>
 
       <p className="text-neutral-300">
-        Please send me a message using the form below.
+        Please send me a message using the form below:
       </p>
 
       <div className="mt-8">
