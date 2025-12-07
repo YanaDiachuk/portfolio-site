@@ -17,7 +17,7 @@ export default function FormContact() {
       <input className="input" placeholder="Your name" value={name} onChange={e=>setName(e.target.value)} />
       <input type="email" className="input" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} />
       <textarea className="input h-32" placeholder="Message" value={message} onChange={e=>setMessage(e.target.value)} />
-      <button className="btn" type="submit">Send</button>
+      <button data-cy='send-btn' className="btn" type="submit">Send</button>
       {ok && <div className="text-sm opacity-70">{ok}</div>}
     </form>
   )

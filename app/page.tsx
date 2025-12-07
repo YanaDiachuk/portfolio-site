@@ -8,6 +8,7 @@ export default function AboutPage() {
       {/* Фото слева */}
       <div className="md:w-1/3 w-full">
         <Image
+          data-cy='angie-pic'
           src="/pangie2.png"
           width={800}
           height={1000}
@@ -17,7 +18,7 @@ export default function AboutPage() {
       </div>
 
       {/* Текст справа */}
-      <div className="md:w-2/3 w-full space-y-4 text-neutral-300">
+      <div data-cy='about-text' className="md:w-2/3 w-full space-y-4 text-neutral-300">
         <h1 className="h1 mb-4">About me</h1>
 
         <p>

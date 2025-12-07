@@ -5,16 +5,17 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
+    <header data-cy='header' className="mb-6 flex flex-wrap items-center justify-between gap-3">
       {/* Логотип / название сайта */}
       <Link
         href="/"
         className="font-main text-xl tracking-wide"
+        data-cy='angie'
       >
         Angie
       </Link>
 
-      <nav className="flex flex-wrap gap-2">
+      <nav data-cy='main-nav' className="flex flex-wrap gap-2">
         <Link href="/artworks" data-cy="artworks-btn" className="btn px-3 py-1 text-sm md:text-base">
           Artworks
         </Link>
