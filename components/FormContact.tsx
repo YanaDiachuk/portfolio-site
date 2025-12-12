@@ -20,15 +20,15 @@ export default function FormContact() {
 
     // --- CLIENT-SIDE VALIDATION ---
     if (name.trim().length < 1) {
-      setError('Name must be at least 1 character.')
+      setError('Name must be at least 1 character')
       return
     }
     if (!validateEmail(email)) {
-      setError('Please enter a valid email address.')
+      setError('Please enter a valid email')
       return
     }
     if (message.trim().length < 10) {
-      setError('Message must be at least 10 characters.')
+      setError('Message must be at least 10 characters')
       return
     }
 
