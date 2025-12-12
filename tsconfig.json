@@ -36,7 +36,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-  ],
+, "cypress/e2e/specs/header&footer.cy.js"  ],
   "exclude": [
     "node_modules"
   ]
